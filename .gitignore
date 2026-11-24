@@ -10,5 +10,6 @@ data/
 
 # Échantillons générés temporaires et checkpoints
 samples/
+images_generees/
 *.pth
 *.pt
