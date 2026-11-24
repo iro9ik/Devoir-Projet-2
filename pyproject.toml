@@ -1,0 +1,19 @@
+[project]
+name = "devoir-projet-2-modeles-generatifs"
+version = "0.1.0"
+description = "Activité Pratique N°2 : Modèles Génératifs avec PyTorch (Discriminatif, Autoencodeur, VAE, GAN, DDPM)"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "ipykernel>=6.29.0",
+    "torch>=2.2.0",
+    "torchvision>=0.17.0",
+    "matplotlib>=3.8.0",
+    "torcheval>=0.0.7",
+    "numpy>=1.26.0",
+    "tqdm>=4.66.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
