@@ -8,6 +8,7 @@ Ce projet explore les architectures generatives profondes appliquees au jeu de d
 
 - **Modeles_generatifs_pytorch.ipynb** : Notebook pratique implementant les differents modeles generatifs.
 - **Modeles_generatifs_pytorch_avec_explications.ipynb** : Notebook detaille incluant les explications theoriques bloc par bloc.
+- **images_generees/** : Echantillons et grilles de chiffres generes automatiquement par le GAN.
 - **pyproject.toml** : Configuration officielle de l'environnement Python 3.11 avec UV.
 - **.gitignore** : Configuration ignorant les telechargements du dataset et l'environnement virtuel.
 
@@ -32,6 +33,14 @@ Ce projet explore les architectures generatives profondes appliquees au jeu de d
 
 ### 5. Modeles de Diffusion (DDPM)
 - Processus de bruitage progressif des images suivi de l'apprentissage du debruitage pas a pas.
+
+---
+
+## Apercu des Resultats Generes
+
+Exemple de chiffres synthetiques produits par le Generateur du GAN et exportes dans le dossier `images_generees/` :
+
+![Chiffres generes par le GAN](images_generees/nouveaux_chiffres.png)
 
 ---
 
