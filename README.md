@@ -1,48 +1,48 @@
-# 🎨 Devoir Projet 2 : Modèles Génératifs avec PyTorch
+# Devoir Projet 2 : Modeles Generatifs avec PyTorch
 
-Ce projet explore les architectures génératives profondes sur le jeu de données manuscrit MNIST.
-
----
-
-## 📂 Contenu du Dossier
-
-- **`Modeles_generatifs_pytorch.ipynb`** : Le notebook pratique implémentant les modèles génératifs.
-- **`Modeles_generatifs_pytorch_avec_explications.ipynb`** : Le notebook détaillé avec les explications théoriques bloc par bloc.
-- **`pyproject.toml`** : Fichier de configuration de l'environnement Python 3.11 avec UV.
-- **`.gitignore`** : Fichier ignorant le cache MNIST et l'environnement virtuel.
+Ce projet explore les architectures generatives profondes appliquees au jeu de donnees manuscrit MNIST.
 
 ---
 
-## 📝 Description des Sections
+## Contenu du Dossier
 
-### 1. 🎯 Modèle Discriminatif (Baseline)
-- Modèle de classification standard apprenant $P(y \mid x)$ pour reconnaître le chiffre de l'image.
-
-### 2. 🗜️ Auto-Encodeur Déterministe (AE)
-- Compresse l'image dans un espace latent 2D puis la reconstruit avec une perte MSE.
-- Permet de visualiser la séparation des chiffres sur un plan 2D, mais présente des zones vides.
-
-### 3. 🎲 Auto-Encodeur Variationnel (VAE)
-- Remplace les points déterministes par une distribution probabiliste normale $\mathcal{N}(0, I)$.
-- Utilise l'astuce de reparamétrisation ($z = \mu + \sigma \odot \epsilon$) pour permettre la descente de gradient.
-- Permet de générer de nouveaux chiffres continus en explorant la grille latente 2D.
-
-### 4. ⚔️ Réseaux Antagonistes Génératifs (GAN)
-- Jeu minimax entre un Générateur qui crée de faux chiffres et un Discriminateur qui les évalue.
-
-### 5. 🌫️ Modèles de Diffusion (DDPM)
-- Processus de bruitage progressif des images puis apprentissage du débruitage étape par étape.
+- **Modeles_generatifs_pytorch.ipynb** : Notebook pratique implementant les differents modeles generatifs.
+- **Modeles_generatifs_pytorch_avec_explications.ipynb** : Notebook detaille incluant les explications theoriques bloc par bloc.
+- **pyproject.toml** : Configuration officielle de l'environnement Python 3.11 avec UV.
+- **.gitignore** : Configuration ignorant les telechargements du dataset et l'environnement virtuel.
 
 ---
 
-## 🚀 Comment Exécuter
+## Description des Sections
 
-1. Configurez l'environnement avec UV :
+### 1. Modele Discriminatif (Baseline)
+- Classifieur de reference apprenant la distribution conditionnelle P(y | x) pour reconnaitre le chiffre.
+
+### 2. Auto-Encodeur Deterministe (AE)
+- Compresse l'image d'entree dans un espace latent 2D avant de la reconstruire avec une perte MSE.
+- Visualise la repartition des chiffres sur un plan 2D, tout en montrant les limites des zones vides.
+
+### 3. Auto-Encodeur Variationnel (VAE)
+- Remplace les points deterministes par une distribution de probabilite normale N(0, I).
+- Utilise l'astuce de reparametrisation (z = mu + sigma * epsilon) pour rendre l'echantillonnage derivable.
+- Permet la generation continue de nouveaux chiffres par exploration de la variete latente 2D.
+
+### 4. Reseaux Antagonistes Generatifs (GAN)
+- Jeu minimax opposant un Generateur produisant des chiffres synthetiques et un Discriminateur les evaluant.
+
+### 5. Modeles de Diffusion (DDPM)
+- Processus de bruitage progressif des images suivi de l'apprentissage du debruitage pas a pas.
+
+---
+
+## Comment Executer
+
+1. Initialiser l'environnement avec UV :
    ```bash
    uv sync
    ```
-   *Ou avec pip :*
+   Ou via pip :
    ```bash
    pip install torch torchvision matplotlib torcheval
    ```
-2. Lancez le notebook dans VS Code pour visualiser les reconstructions et générations de chiffres.
+2. Ouvrir le notebook dans VS Code pour visualiser les reconstructions et generations.
